@@ -32,26 +32,3 @@ A big part of the motiviation here is to explore phase changes in complexity as 
 * reservations - facilities might want to reserve capacity for items
 * scheduled movements - related to a reservation
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
