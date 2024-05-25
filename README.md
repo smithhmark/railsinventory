@@ -1,7 +1,5 @@
 # railsinventory
 
-this project represents an exploration of an inventory tracking system, implementeding in Ruby on Rails.
-
 ## Goal
 The primary goal of this project is for me to explore migrations (schema and data) as the data model expands via an agile development process.
 
@@ -10,7 +8,15 @@ A big part of the motiviation here is to explore phase changes in complexity as 
 * Migration to SOA
 * intration with event-based systems
 
-## Data model (asperational)
+As a motivating test case, this project represents an exploration of an inventory tracking system. Specifically, a system where item owners are entrusting high-value items to the care/storage of the staff at a facility. 
+
+Potential example usecases:
+* Doggy daycare
+* childcare/school attendance
+* wine storage
+
+
+## Data model (asperationalt)
 * Accounts - represent that there is someone/thing paying to track things their responsible for
 * Facilities - an account might have multiple top-level places where inventory is kept
 * spaces - inside a facility there are different places to go look for inventory items
