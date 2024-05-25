@@ -1,9 +1,11 @@
 FROM ruby:3.3.1-slim-bookworm AS build
 
-WORKDIR = /app
 
 ARG UID=1000
 ARG GID=1000
+
+WORKDIR /myapp
+
 RUN bash -c "set -o pipefail && apt-get update \
   && apt-get install -y --no-install-recommends build-essential curl git libpq-dev \
   && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key -o /etc/apt/keyrings/nodesource.asc \
@@ -16,8 +18,9 @@ RUN bash -c "set -o pipefail && apt-get update \
 RUN bash -c "groupadd -g \"${GID}\" ruby \
   && useradd --create-home --no-log-init -u \"${UID}\" -g \"${GID}\" ruby \
   && mkdir /node_modules \
-  && mkdir /app \
-  && chown ruby:ruby -R /node_modules /app"
+  && chown ruby:ruby -R /node_modules"
+
+RUN chown ruby:ruby -R /myapp
 
 USER ruby
 
@@ -26,7 +29,7 @@ COPY --chown=ruby:ruby Gemfile* ./
 RUN bundle install
 
 COPY --chown=ruby:ruby *yarn* ./
-#RUN yarn install
+RUN yarn install
 
 ARG RAILS_ENV="production"
 ARG NODE_ENV="production"
