@@ -22,7 +22,7 @@ Potential example usecases:
 * childcare/school attendance
 * wine storage
 
-see the (tentative project plan)[./PROJECT_PLAN.md] for more details.
+see the [tentative project plan](./PROJECT_PLAN.md) for more details.
 
 ## Data model (asperationalt)
 * Accounts - represent that there is someone/thing paying to track things their responsible for
