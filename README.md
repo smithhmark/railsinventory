@@ -1,10 +1,17 @@
 # railsinventory
 
 ## Goal
-The primary goal of this project is for me to explore migrations (schema and data) as the data model expands via an agile development process.
+The **primary goal** of this project is for me to explore migrations (schema and data) as the data model expands via an agile development process.
+
+Secondary goals are related to exploring how best to integrate "professional" software engineering practices in a techstack that I am not an expert in. Such as
+* testing practices
+   * Getting familiar with rspec
+   * how to end-to-end test user stories
+* metrics and static analysis
 
 A big part of the motiviation here is to explore phase changes in complexity as they impact Rails apps. Examples of that include:
 * schema and data migrations
+* introduction of (REST) API
 * Migration to SOA
 * intration with event-based systems
 
@@ -15,6 +22,7 @@ Potential example usecases:
 * childcare/school attendance
 * wine storage
 
+see the (tentative project plan)[./PROJECT_PLAN.md] for more details.
 
 ## Data model (asperationalt)
 * Accounts - represent that there is someone/thing paying to track things their responsible for
