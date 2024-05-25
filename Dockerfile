@@ -40,4 +40,17 @@ ENV RAILS_ENV="${RAILS_ENV}" \
 
 COPY --chown=ruby:ruby . .
 
+# Precompile bootsnap code for faster boot times
+#RUN bundle exec bootsnap precompile app/ lib/
+
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+#RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+
+# Entrypoint prepares the database.
+#ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+
+# Start the server by default, this can be overwritten at runtime
+EXPOSE 3000
+
+#CMD ["./bin/rails", "server"]
 CMD ["bash"]
