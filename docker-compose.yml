@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  rails:
+    build:
+       context: .
+       args:
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
+        - "RAILS_ENV=${RAILS_ENV:-production}"
+        - "NODE_ENV=${NODE_ENV:-production}"
+    env_file:
+      - ".env"
+
+    ports:
+      - 3000:3000
+    volumes:
+      - "/${PWD}:/app"
