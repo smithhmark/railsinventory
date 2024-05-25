@@ -24,7 +24,7 @@ Potential example usecases:
 
 see the [tentative project plan](./PROJECT_PLAN.md) for more details.
 
-## Data model (asperationalt)
+## Data model (asperational)
 * Accounts - represent that there is someone/thing paying to track things their responsible for
 * Facilities - an account might have multiple top-level places where inventory is kept
 * spaces - inside a facility there are different places to go look for inventory items
