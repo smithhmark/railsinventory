@@ -28,15 +28,22 @@ for example, there could be two big play rooms (small dogs, and big dogs) and se
 allow staff to provide updates on items and owners to see them
 
 ## "Project" Roadmap
+1. pre-MVP
+   1. allow item owners to create and see their items
+   1. introduce auth
+   1. only an owner can see their items
+   1. allow account owners to create and see only their facilities
+   1. move to postgres for dev
 1. fairly minimal product
-   - drop off item
-   - pick up item
-   - setup facility
+   - drop off item (account-owner action)
+   - pick up item (account-owner action)
 1. initial testing capability
    - rspec tests? 
    - coverage report?
 1. next traunche of capabilities
    - item descriptions?
+   - item types
+      - facilities can handle types
    - multiple staff
 1. Some kind of end-to-end testing
    - selenium?
@@ -44,9 +51,10 @@ allow staff to provide updates on items and owners to see them
 1. introduce an API
    - JWT
    - locust test scenario:
-      - several staff relocating items
-      - owners:
+      - several staff:
+         - relocating items
          - dropping off and picking up
+      - item owners:
          - requesting status updates
 
 ## 
