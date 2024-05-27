@@ -51,5 +51,7 @@ this effectively:
 - runs `rails g module Item name description:text type`
 - runs `rails g view Item`
 
-NOTE: scaffold builds out some UI automatically
+NOTES:
+- scaffold builds out some UI automatically
+- **do not** use `type` as a field/column name. ActiveRecord reserves that for a special use
 
