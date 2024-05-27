@@ -34,21 +34,21 @@ allow staff to provide updates on items and owners to see them
    1. [ ] only an owner can see their items
    1. [ ] allow account owners to create and see their facilities
    1. [ ] move to postgres for dev
-1. [ ] fairly minimal product
+1. fairly minimal product
    - [ ] drop off item (account-owner action)
    - [ ] pick up item (account-owner action)
-1. [ ] initial testing capability
+1. initial testing capability
    - [ ] rspec tests? 
    - [ ] coverage report?
-1. [ ] next traunche of capabilities
+1. next traunche of capabilities
    - [ ] item descriptions?
    - [ ] item types
       - [ ] facilities can handle types
    - [ ] multiple staff
-1. [ ] Some kind of end-to-end testing
+1. Some kind of end-to-end testing
    - [ ] selenium?
    - [ ] locust tests?
-1. [ ] introduce an API
+1. introduce an API
    - [ ] JWT
    - [ ] locust test scenario:
       - [ ] several staff:
