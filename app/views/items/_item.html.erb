@@ -1,7 +1,6 @@
-<div id="<%= dom_id item %>">
+<div id="<%= dom_id item %>" class="card">
   <p>
-    <strong>Name:</strong>
-    <%= item.name %>
+    <h4><%= item.name %></h4>
   </p>
 
   <p>
@@ -11,7 +10,7 @@
 
   <p>
     <strong>Description:</strong>
-    <%= item.description %>
+    <textarea rows=5 cols=30 ><%= item.description %></textarea>
   </p>
 
 </div>
