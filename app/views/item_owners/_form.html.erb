@@ -1,0 +1,27 @@
+<%= form_with(model: item_owner) do |form| %>
+  <% if item_owner.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(item_owner.errors.count, "error") %> prohibited this item_owner from being saved:</h2>
+
+      <ul>
+        <% item_owner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :owner_name, style: "display: block" %>
+    <%= form.text_field :owner_name %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

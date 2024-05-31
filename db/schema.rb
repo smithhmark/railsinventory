@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_27_133634) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_30_175907) do
+  create_table "item_owners", force: :cascade do |t|
+    t.string "owner_name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "type_code"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "owner_id_id", null: false
+    t.index ["owner_id_id"], name: "index_items_on_owner_id_id"
   end
 
+  add_foreign_key "items", "item_owners", column: "owner_id_id"
 end

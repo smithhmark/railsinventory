@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :item_owners
   resources :items
   get 'home/index'
   get 'home/about'

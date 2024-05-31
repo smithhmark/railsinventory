@@ -13,6 +13,13 @@ class ItemsController < ApplicationController
   # GET /items/new
   def new
     @item = Item.new
+    @owners = []
+
+    ItemOwner.all.each do |owner|
+      oid = owner.id
+      name = owner.owner_name
+      @owners.push([name, oid])
+    end
   end
 
   # GET /items/1/edit
@@ -22,6 +29,12 @@ class ItemsController < ApplicationController
   # POST /items or /items.json
   def create
     @item = Item.new(item_params)
+    #@owners = []
+    #ItemOwner.all.each do |owner|
+    #  oid = owner.id
+    #  name = owner.owner_name
+    #  @owners.push([name, oid])
+    #end
 
     respond_to do |format|
       if @item.save
@@ -65,6 +78,10 @@ class ItemsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def item_params
-      params.require(:item).permit(:name, :type_code, :description)
+      params.require(:item).permit(:name, :type_code, :description, :item_owner)
+      logger.debug params
+      params[:item_owner] = params[:item_owner].to_i
+      logger.debug params
+      params
     end
 end

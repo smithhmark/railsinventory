@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :item_owner, style: "display: block" %>
+    <%= form.select :item_owner, @owners %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
